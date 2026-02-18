@@ -22,9 +22,14 @@ export const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
             {/* Subtle glow behind to ensure visibility against anything */}
             <div className="absolute inset-0 bg-primary/10 blur-xl -z-10 rounded-full scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
-          <span className="font-display font-black text-2xl tracking-[0.2em] text-white hidden sm:block">
-            FORGE<span className="text-primary italic">NEXUS</span>
-          </span>
+          <div className="flex flex-col -space-y-1">
+            <span className="font-display font-black text-2xl tracking-[0.3em] text-white hidden sm:block leading-none group-hover:text-primary transition-colors duration-500">
+              FORGE
+            </span>
+            <span className="font-display font-black text-[10px] tracking-[0.8em] text-primary/60 hidden sm:block uppercase pl-1 group-hover:text-primary transition-colors duration-500">
+              Nexus Protocol
+            </span>
+          </div>
         </div>
 
         <nav className="hidden md:flex items-center gap-10">
