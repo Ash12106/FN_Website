@@ -116,7 +116,7 @@ export const Footer: React.FC = () => {
                   </div>
                   <p className="text-[13px] leading-relaxed font-light pt-1">
                     <span className="text-white/80 font-bold block mb-1">HQ ADDRESS</span>
-                    <span className="text-white/90 font-medium">Vidhyavardhaka College of Engineering</span>,<br />
+                    <span className="text-white font-black text-lg">Vidhyavardhaka College of Engineering</span>,<br />
                     P.B. No. 206, Gokulam III Stage,<br />
                     Mysuru - 570 002, India
                   </p>
@@ -127,7 +127,7 @@ export const Footer: React.FC = () => {
                   </div>
                   <p className="text-[13px] font-light pt-1">
                     <span className="text-white/80 font-bold block mb-1">DIRECT LINE</span>
-                    +91 821 4276200 / 225
+                    +91 xxxxxxxxxx
                   </p>
                 </div>
               </div>
@@ -138,7 +138,7 @@ export const Footer: React.FC = () => {
                   </div>
                   <p className="text-[11px] font-light pt-1 uppercase tracking-wider">
                     <span className="text-white/80 font-bold block mb-1">COMMUNICATIONS</span>
-                    principal@vvce.ac.in
+                    forgenexus@vvce.ac.in
                   </p>
                 </div>
                 <div className="flex gap-4 group">
@@ -185,7 +185,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
           
-          <div className="text-[10px] uppercase tracking-[0.3em] font-medium text-white/20">
+          <div className="text-xs uppercase tracking-[0.3em] font-medium text-white/30">
             © 2026 Vidhyavardhaka College of Engineering. All Rights Reserved.
           </div>
         </div>

@@ -10,6 +10,7 @@ import Galaxy from './components/Galaxy';
 import { JoinModal } from './components/JoinModal';
 import { Team } from './components/Team';
 import { Focus } from './components/Focus';
+import { Gallery } from './components/Gallery';
 import Support from './components/Support';
 
 const studentConfig: PortalConfig = {
@@ -32,6 +33,7 @@ const facultyConfig: PortalConfig = {
 
 const App: React.FC = () => {
   const [isJoinModalOpen, setIsJoinModalOpen] = React.useState(false);
+  const [portalFilter, setPortalFilter] = React.useState<'none' | 'student' | 'faculty'>('none');
   const containerRef = useRef<HTMLDivElement>(null);
   
   const { scrollYProgress } = useScroll({
@@ -48,6 +50,7 @@ const App: React.FC = () => {
   // Parallax offsets for different sections to create depth
   const yAbout = useTransform(smoothProgress, [0, 0.5], [0, -50]);
   const yTeam = useTransform(smoothProgress, [0, 0.7], [0, -100]);
+  const yGallery = useTransform(smoothProgress, [0.1, 0.75], [0, -110]);
   const yFocus = useTransform(smoothProgress, [0.1, 0.8], [0, -120]);
   const ySupport = useTransform(smoothProgress, [0.1, 1], [0, -140]);
   const yHero = useTransform(smoothProgress, [0.1, 1], [0, -150]);
@@ -93,21 +96,20 @@ const App: React.FC = () => {
         </div>
         
         <main className="relative pt-32 md:pt-40 pb-20 px-4 flex flex-col items-center">
-          {/* About Section at Top */}
+          <motion.div 
+            style={{ y: yHero }}
+            className="pointer-events-auto mb-16"
+          >
+            <Hero />
+          </motion.div>
+          
+          {/* About Section */}
           <motion.section 
             id="about" 
             style={{ y: yAbout }}
-            className="pointer-events-auto w-full flex justify-center mb-16 px-4 scroll-mt-24"
-          >
-            <About />
-          </motion.section>
-
-          <motion.section 
-            id="team" 
-            style={{ y: yTeam }}
             className="pointer-events-auto w-full flex justify-center mb-32 px-4 scroll-mt-24"
           >
-            <Team />
+            <About />
           </motion.section>
 
           <motion.section 
@@ -119,6 +121,22 @@ const App: React.FC = () => {
           </motion.section>
 
           <motion.section 
+            id="team" 
+            style={{ y: yTeam }}
+            className="pointer-events-auto w-full flex justify-center mb-32 px-4 scroll-mt-24"
+          >
+            <Team />
+          </motion.section>
+
+          <motion.section 
+            id="gallery" 
+            style={{ y: yGallery }}
+            className="pointer-events-auto w-full flex justify-center mb-32 px-4 scroll-mt-24"
+          >
+            <Gallery />
+          </motion.section>
+
+          <motion.section 
             id="support" 
             style={{ y: ySupport }}
             className="pointer-events-auto w-full flex justify-center mb-32 px-4 scroll-mt-24"
@@ -126,22 +144,23 @@ const App: React.FC = () => {
             <Support />
           </motion.section>
 
-          <motion.div 
-            style={{ y: yHero }}
-            className="pointer-events-auto mb-16"
-          >
-            <Hero />
-          </motion.div>
-          
-          {/* Dual Portals Grid */}
-          <motion.section 
-            id="portals" 
-            style={{ y: yPortals }}
-            className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch pointer-events-auto scroll-mt-24"
-          >
-            <PortalCard config={studentConfig} delay={0} />
-            <PortalCard config={facultyConfig} delay={200} />
-          </motion.section>
+          {/* Dual Portals Grid - Hidden by default */}
+          {portalFilter !== 'none' && (
+            <motion.section 
+              id="portals" 
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              style={{ y: yPortals }}
+              className="max-w-2xl w-full grid grid-cols-1 gap-8 lg:gap-12 items-stretch pointer-events-auto mb-32 scroll-mt-24 mx-auto"
+            >
+              {portalFilter === 'student' && (
+                <PortalCard config={studentConfig} delay={0} />
+              )}
+              {portalFilter === 'faculty' && (
+                <PortalCard config={facultyConfig} delay={0} />
+              )}
+            </motion.section>
+          )}
         </main>
         
         <div className="pointer-events-auto">
@@ -149,7 +168,16 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      <JoinModal isOpen={isJoinModalOpen} onClose={() => setIsJoinModalOpen(false)} />
+      <JoinModal 
+        isOpen={isJoinModalOpen} 
+        onClose={() => setIsJoinModalOpen(false)} 
+        onSelectRole={(role) => {
+          setPortalFilter(role);
+          setTimeout(() => {
+            document.getElementById('portals')?.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }}
+      />
     </div>
   );
 };

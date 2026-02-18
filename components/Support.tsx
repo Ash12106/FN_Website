@@ -7,7 +7,7 @@ const supportChannels = [
     description: "Connect with faculty experts for patent filing and high-impact R&D guidance.",
     icon: "engineering",
     action: "CONTACT MENTOR",
-    email: "mentor.forgenexus@vvce.ac.in",
+    email: "forgenexus@vvce.ac.in",
     status: "AVAILABLE",
     tag: "FACULTY CORE",
     freq: "ID: 01"
@@ -17,7 +17,7 @@ const supportChannels = [
     description: "Assistance with VR/AR hardware, AI compute resources, and lab infrastructure.",
     icon: "terminal",
     action: "GET HELP",
-    email: "tech.forgenexus@vvce.ac.in",
+    email: "forgenexus@vvce.ac.in",
     status: "ACTIVE",
     tag: "INFRASTRUCTURE",
     freq: "ID: 02"
@@ -154,21 +154,21 @@ export default function Support() {
              <div className="space-y-8 text-center md:text-left max-w-xl">
                 <div className="flex items-center justify-center md:justify-start gap-4">
                   <div className="px-4 py-1.5 rounded-md bg-primary/20 border border-primary/40 text-primary text-[10px] font-black uppercase tracking-[0.3em] shadow-[0_0_20px_rgba(var(--primary-rgb),0.2)]">Primary Hub</div>
-                  <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.4em]">ACADEMIC BLOCK</div>
+                  <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.4em]">Main BLOCK</div>
                 </div>
                 <div className="space-y-4">
                   <h4 className="text-4xl md:text-6xl font-black text-white font-display uppercase italic tracking-tighter">ForgeNexus <span className="text-gradient">Innovation Lab</span></h4>
                   <p className="text-white/40 text-sm italic uppercase tracking-[0.2em] font-medium leading-relaxed">
-                    LAB UNIT 204 // ADVANCED PROTOTYPING & RESEARCH CENTER.<br />
-                    <span className="text-primary/60 not-italic">Academic Block • VVCE Campus • Mysuru</span>
+                    LAB M310/311.<br />
+                    <span className="text-primary/60 not-italic">Main Block • VVCE Campus • Mysuru</span>
                   </p>
                 </div>
              </div>
              
              <div className="flex flex-col items-center gap-8">
-                <div className="w-40 h-40 rounded-full border-2 border-dashed border-primary/30 flex items-center justify-center relative group-hover:rotate-180 transition-all duration-1000 p-4">
+                <div className="w-40 h-40 rounded-full border-2 border-dashed border-primary/30 flex items-center justify-center relative p-4">
                   <div className="w-full h-full rounded-full bg-primary/10 border border-primary/40 flex items-center justify-center relative shadow-[0_0_50px_rgba(212,175,55,0.15)] overflow-hidden">
-                    <span className="material-symbols-outlined text-6xl text-primary animate-pulse relative z-10 transition-transform group-hover:rotate-[-180deg]">location_on</span>
+                    <span className="material-symbols-outlined text-6xl text-primary animate-pulse relative z-10">location_on</span>
                     {/* Radial Scan */}
                     <div className="absolute inset-0 bg-linear-to-t from-primary/20 to-transparent animate-pulse"></div>
                   </div>

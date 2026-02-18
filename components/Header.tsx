@@ -50,7 +50,7 @@ export const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
         </div>
 
         <nav className="hidden md:flex items-center gap-12">
-          {['About', 'Team', 'Focus', 'Support'].map((item) => (
+          {['About', 'Focus', 'Team', 'Gallery', 'Support'].map((item) => (
             <motion.a 
               key={item}
               href={`#${item.toLowerCase()}`} 
@@ -91,7 +91,7 @@ export const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             className="md:hidden absolute top-28 left-6 right-6 p-8 rounded-[2.5rem] bg-black/90 border border-white/10 backdrop-blur-3xl shadow-2xl flex flex-col gap-6"
           >
-             {['About', 'Team', 'Focus', 'Support'].map((item, i) => (
+             {['About', 'Focus', 'Team', 'Gallery', 'Support'].map((item, i) => (
               <motion.a 
                 key={item}
                 initial={{ opacity: 0, x: -10 }}

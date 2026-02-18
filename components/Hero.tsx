@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-primary/20 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-[0.4em] mb-12 shadow-[0_0_40px_rgba(var(--primary-rgb),0.1)] backdrop-blur-md"
+        className="inline-flex items-center gap-3 px-8 py-3 rounded-full border border-primary/20 bg-primary/10 text-primary text-sm font-black uppercase tracking-[0.4em] mb-12 shadow-[0_0_40px_rgba(var(--primary-rgb),0.1)] backdrop-blur-md"
       >
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>

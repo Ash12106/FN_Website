@@ -27,7 +27,7 @@ export const About: React.FC = () => {
       <div className="flex flex-col gap-15">
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center text-center relative z-10 animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-black uppercase tracking-[0.4em] mb-8 shadow-[0_0_30px_rgba(var(--primary-rgb),0.15)]">
+          <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-bold uppercase tracking-[0.3em] mb-8 shadow-[0_0_20px_rgba(var(--primary-rgb),0.1)]">
             Vidhyavardhaka College of Engineering 
           </div>
           <h2 className="text-5xl md:text-7xl font-bold font-display uppercase italic tracking-tighter text-white leading-none max-w-4xl mx-auto">
@@ -40,53 +40,43 @@ export const About: React.FC = () => {
           style={{ y: useTransform(scrollYProgress, [0, 1], [30, -30]) }}
           className="relative group z-10 animate-in fade-in slide-in-from-bottom-12 duration-1000"
         >
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-[3rem] blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-          <div className="glass-card relative p-12 md:p-20 rounded-[3rem] border-white/5 bg-black/60 backdrop-blur-3xl overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24 group">
-            
-            {/* Holographic Decorations */}
-            <div className="absolute top-0 right-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-secondary/40 to-transparent"></div>
-            
-            <div className="flex-1 space-y-12 text-center lg:text-left">
-               <div className="inline-flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:rotate-12 transition-transform duration-500">
-                    <span className="material-symbols-outlined text-3xl">visibility</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <div className="text-primary font-display text-[10px] uppercase tracking-[0.6em] font-black">Our Philosophy</div>
-                    <div className="text-[9px] text-white/20 uppercase font-black tracking-widest mt-0.5 whitespace-nowrap">Core Objective: Innovate</div>
-                  </div>
+          <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-[2rem] blur-xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <div className="glass-card relative p-10 md:p-16 lg:p-20 rounded-[2rem] border-white/10 bg-black/60 backdrop-blur-3xl overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+            <div className="flex-1 space-y-10 text-center lg:text-left">
+               <div className="inline-flex items-center gap-3">
+                  <div className="h-[1px] w-8 bg-primary/40 hidden lg:block"></div>
+                  <div className="text-primary font-display text-[10px] uppercase tracking-[0.6em] font-black">Strategic Vision</div>
                </div>
-               <h3 className="text-4xl md:text-6xl lg:text-7xl font-black font-display text-white leading-[0.95] tracking-tight italic uppercase">
-                  Pioneering <br />
-                  <span className="text-gradient">Intellectual</span> <br />
-                  Frontiers
+               <h3 className="text-4xl md:text-5xl lg:text-6xl font-black font-display text-white leading-[1.05] tracking-tight">
+                  Empowering the <span className="text-gradient">Next Generation</span> of Engineers
                </h3>
-               <p className="text-white/40 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto lg:mx-0 pr-0 lg:pr-12">
-                  ForgeNexus serves as the catalyst at Vidhyavardhaka College of Engineering, bridging the divide between academic inquiry and industrial application.
-               </p>
+               <div className="relative">
+                 <div className="absolute -left-6 top-0 bottom-0 w-1 bg-primary/20 rounded-full hidden lg:block"></div>
+                 <p className="text-white/80 text-xl md:text-2xl font-light font-sans leading-relaxed italic max-w-4xl">
+                   "To build a multidisciplinary student-faculty ecosystem that transforms academic curiosity into research publications, patents, and real-world products that solve problems across all engineering domains."
+                 </p>
+               </div>
             </div>
-
-            <div className="flex-1 w-full lg:w-auto relative">
-              <div className="relative aspect-square max-w-[450px] mx-auto group-hover:scale-105 transition-transform duration-1000 cursor-none">
-                {/* Visual Data Core */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                   <motion.div 
-                     animate={{ rotate: 360 }}
-                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                     className="absolute w-full h-full border border-primary/20 rounded-full border-dashed p-4"
-                   />
-                   <motion.div 
-                     animate={{ rotate: -360 }}
-                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                     className="absolute w-[80%] h-[80%] border border-white/5 rounded-full border-dashed"
-                   />
-                   <div className="w-40 h-40 rounded-full bg-primary/10 backdrop-blur-xl border border-primary/30 flex items-center justify-center relative overflow-hidden group/eye">
-                      <span className="material-symbols-outlined text-6xl text-primary animate-pulse relative z-10">hub</span>
-                      <div className="absolute inset-0 bg-primary/5 animate-pulse"></div>
-                   </div>
-                </div>
-              </div>
+            
+            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-[400px] lg:h-[400px] flex-shrink-0 flex items-center justify-center">
+               {/* Complexity layers */}
+               <div className="absolute inset-0 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+               <motion.div 
+                 style={{ rotate }}
+                 className="absolute inset-8 border border-primary/20 rounded-full"
+               ></motion.div>
+               <motion.div 
+                 style={{ rotate: useTransform(scrollYProgress, [0, 1], [0, -45]) }}
+                 className="absolute inset-16 border border-secondary/10 rounded-full"
+               ></motion.div>
+               
+               <div className="relative w-32 h-32 md:w-48 md:h-48 border border-white/20 rounded-full flex items-center justify-center bg-black/40 backdrop-blur-xl shadow-2xl z-10">
+                  <span className="material-symbols-outlined text-6xl md:text-8xl text-primary drop-shadow-[0_0_15px_rgba(var(--primary-rgb),0.5)]">rocket_launch</span>
+               </div>
+               
+               {/* Orbiting particles (simulated with CSS circles) */}
+               <div className="absolute w-2 h-2 bg-primary rounded-full top-0 left-1/2 -ml-1 animate-[ping_3s_linear_infinite]"></div>
+               <div className="absolute w-2 h-2 bg-secondary rounded-full bottom-0 left-1/2 -ml-1 animate-[ping_4s_linear_infinite]"></div>
             </div>
           </div>
         </motion.div>

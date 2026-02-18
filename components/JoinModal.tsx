@@ -4,16 +4,14 @@ import { Button } from './Button';
 interface JoinModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onSelectRole: (role: 'student' | 'faculty') => void;
 }
 
-export const JoinModal: React.FC<JoinModalProps> = ({ isOpen, onClose }) => {
+export const JoinModal: React.FC<JoinModalProps> = ({ isOpen, onClose, onSelectRole }) => {
   if (!isOpen) return null;
 
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleSelection = (role: 'student' | 'faculty') => {
+    onSelectRole(role);
     onClose();
   };
 
@@ -52,11 +50,7 @@ export const JoinModal: React.FC<JoinModalProps> = ({ isOpen, onClose }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
           {/* Innovator Option */}
           <div 
-            onClick={() => {
-                const portals = document.getElementById('portals');
-                if (portals) portals.scrollIntoView({ behavior: 'smooth' });
-                onClose();
-            }}
+            onClick={() => handleSelection('student')}
             className="group cursor-pointer p-8 rounded-xl border border-primary/20 bg-primary/5 hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1"
           >
             <div className="size-14 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
@@ -68,11 +62,7 @@ export const JoinModal: React.FC<JoinModalProps> = ({ isOpen, onClose }) => {
 
           {/* Architect Option */}
           <div 
-            onClick={() => {
-                const portals = document.getElementById('portals');
-                if (portals) portals.scrollIntoView({ behavior: 'smooth' });
-                onClose();
-            }}
+            onClick={() => handleSelection('faculty')}
             className="group cursor-pointer p-8 rounded-xl border border-secondary/20 bg-secondary/5 hover:bg-secondary/10 hover:border-secondary/40 transition-all duration-300 transform hover:-translate-y-1"
           >
             <div className="size-14 rounded-lg bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
