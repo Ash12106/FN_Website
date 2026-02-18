@@ -7,28 +7,24 @@ const focusAreas = [
 		description:
 			'Guidance on identifying patentable inventions and navigating the legal landscape of intellectual property.',
 		icon: 'gavel',
-		stats: '15+ Filed',
 	},
 	{
 		title: 'Research Excellence',
 		description:
 			'Bridging the gap between academic theory and published scholarly excellence in high-impact journals.',
 		icon: 'book_4',
-		stats: '50+ Papers',
 	},
 	{
 		title: 'Product Forge',
 		description:
 			'Turning blueprinted ideas into functioning prototypes through inter-departmental collaboration.',
 		icon: 'precision_manufacturing',
-		stats: '10+ Prototypes',
 	},
 	{
 		title: 'Network Synergy',
 		description:
 			'Connecting students with industry mentors and national-level innovation centers.',
 		icon: 'webhook',
-		stats: '20+ Mentors',
 	},
 ];
 
@@ -202,10 +198,7 @@ export const Focus: React.FC = () => {
 							<p className="text-sm text-white/40 leading-relaxed italic">
 								{area.description}
 							</p>
-							<div className="mt-8 flex items-end justify-between">
-								<div className="text-2xl font-black text-white/80 font-display italic group-hover:text-white transition-colors">
-									{area.stats}
-								</div>
+							<div className="mt-8 flex items-end justify-end">
 								<div className="w-12 h-[2px] bg-primary/20 group-hover:w-20 group-hover:bg-primary transition-all duration-500"></div>
 							</div>
 						</motion.div>
