@@ -66,9 +66,5 @@ To replace the placeholder images in the Innovation Gallery or Student Core sect
 - **Innovation Gallery**: Place your `.jpg` or `.png` images in `/public/gallery/` and name them `gallery_1.jpg`, `gallery_2.jpg`, etc.
 - **Team Section**: Place faculty and student core images in `/public/team/`.
 
-## 🏛️ Institutional Identity
-**Vidhyavardhaka College of Engineering (VVCE)**
-*Forging the future through innovation.*
-
 ---
 Created by [Ash12106](https://github.com/Ash12106)
