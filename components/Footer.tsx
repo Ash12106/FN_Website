@@ -114,9 +114,9 @@ export const Footer: React.FC = () => {
                   <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-primary/40 transition-colors">
                     <span className="material-symbols-outlined text-primary text-xl">location_on</span>
                   </div>
-                  <p className="text-[11px] leading-relaxed font-light pt-1">
+                  <p className="text-[13px] leading-relaxed font-light pt-1">
                     <span className="text-white/80 font-bold block mb-1">HQ ADDRESS</span>
-                    Vidhyavardhaka College of Engineering,<br />
+                    <span className="text-white/90 font-medium">Vidhyavardhaka College of Engineering</span>,<br />
                     P.B. No. 206, Gokulam III Stage,<br />
                     Mysuru - 570 002, India
                   </p>
@@ -125,7 +125,7 @@ export const Footer: React.FC = () => {
                   <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-primary/40 transition-colors">
                     <span className="material-symbols-outlined text-primary text-xl">call</span>
                   </div>
-                  <p className="text-[11px] font-light pt-1">
+                  <p className="text-[13px] font-light pt-1">
                     <span className="text-white/80 font-bold block mb-1">DIRECT LINE</span>
                     +91 821 4276200 / 225
                   </p>

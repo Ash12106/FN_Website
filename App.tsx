@@ -55,6 +55,12 @@ const App: React.FC = () => {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-background-dark text-white selection:bg-primary/30 relative overflow-x-hidden">
+      {/* Background Decor Layer - Technical Grid and Data Streams */}
+      <div className="fixed inset-0 z-1 z-0 pointer-events-none opacity-20">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_100%_200px,#D4AF370a,transparent)]"></div>
+      </div>
+
       {/* Galaxy Background Layer */}
       <motion.div 
         style={{ 
@@ -86,7 +92,7 @@ const App: React.FC = () => {
           <Header onJoinClick={() => setIsJoinModalOpen(true)} />
         </div>
         
-        <main className="relative pt-6 pb-20 px-4 flex flex-col items-center">
+        <main className="relative pt-32 md:pt-40 pb-20 px-4 flex flex-col items-center">
           {/* About Section at Top */}
           <motion.section 
             id="about" 
