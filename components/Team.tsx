@@ -47,7 +47,7 @@ export const Team: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-4 shadow-[0_0_20px_rgba(var(--primary-rgb),0.1)]"
           >
-            Personnel Database
+            Leadership Team
           </motion.div>
           <motion.h2 
             initial={{ opacity: 0, scale: 0.95 }}
@@ -57,16 +57,16 @@ export const Team: React.FC = () => {
             Meet Our <span className="text-gradient">Team</span>
           </motion.h2>
           <p className="text-white/40 text-sm italic tracking-[0.2em] font-light max-w-2xl mx-auto pt-4">
-            [ACCESSING_PERSONNEL_ARCHIVE_SUITE_v4.2]
+            GUIDING INNOVATION AT VIDHYAVARDHAKA COLLEGE OF ENGINEERING
           </p>
         </div>
 
         {/* Faculty Section */}
         <div className="space-y-12">
           <div className="flex items-center gap-4">
-            <h3 className="text-2xl font-display font-black text-white uppercase tracking-widest italic">Faculty <span className="text-primary">Command</span></h3>
+            <h3 className="text-2xl font-display font-black text-white uppercase tracking-widest italic">Faculty <span className="text-primary">Coordinators</span></h3>
             <div className="h-[1px] flex-1 bg-linear-to-r from-primary/40 to-transparent"></div>
-            <div className="text-[10px] font-mono text-primary/40">AUTH_LVL: 04</div>
+            <div className="text-[10px] font-mono text-primary/40">ADMIN</div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {facultyCoordinators.map((member, i) => (
@@ -116,9 +116,9 @@ export const Team: React.FC = () => {
         {/* Student Section */}
         <div className="space-y-12">
           <div className="flex items-center gap-4">
-            <div className="text-[10px] font-mono text-primary/40">AUTH_LVL: 02</div>
+            <div className="text-[10px] font-mono text-primary/40">CORE</div>
             <div className="h-[1px] flex-1 bg-linear-to-l from-primary/40 to-transparent"></div>
-            <h3 className="text-2xl font-display font-black text-white uppercase tracking-widest italic">Core <span className="text-primary italic">Directive</span></h3>
+            <h3 className="text-2xl font-display font-black text-white uppercase tracking-widest italic">Core <span className="text-primary italic">Team</span></h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {studentCoreTeam.map((member, i) => (
@@ -154,7 +154,7 @@ export const Team: React.FC = () => {
                   <div className="w-full pt-4 border-t border-white/5 flex gap-4 justify-center">
                     <div className="flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/5 group-hover:border-primary/20 transition-colors">
                       <div className="w-2 h-2 rounded-full bg-primary/60 animate-pulse"></div>
-                      <span className="text-[9px] font-mono text-white/40 uppercase tracking-tighter">Active_Duty</span>
+                      <span className="text-[9px] font-mono text-white/40 uppercase tracking-tighter">Active</span>
                     </div>
                     <div className="flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/5 group-hover:border-primary/20 transition-colors">
                       <span className="text-[9px] font-mono text-white/40 uppercase tracking-tighter tracking-widest">{member.contact?.split('@')[0]}</span>

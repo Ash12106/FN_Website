@@ -106,7 +106,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-8 lg:col-span-2">
             <div className="inline-flex items-center gap-3">
               <div className="h-[1px] w-6 bg-primary/40"></div>
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Institutional Command Center</h4>
+              <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/60">Campus Headquarters</h4>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 text-white/50">
               <div className="space-y-6">
@@ -175,13 +175,13 @@ export const Footer: React.FC = () => {
 
         <div className="pt-10 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30">System Status:</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/30">Platform Status:</span>
             <div className="flex items-center gap-2 px-4 py-1.5 bg-green-500/5 border border-green-500/20 rounded-full shadow-[0_0_15px_rgba(34,197,94,0.1)]">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
               </span>
-              <span className="text-green-500 text-[9px] font-bold uppercase tracking-[0.2em] leading-none">Nexus Online</span>
+              <span className="text-green-500 text-[9px] font-bold uppercase tracking-[0.2em] leading-none">Active</span>
             </div>
           </div>
           

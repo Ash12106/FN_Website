@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
         </span>
-        VidhyaVardhaka Nexus OS v4.2_Online
+        VidhyaVardhaka ForgeNexus Portal
       </motion.div>
       
       <motion.div
@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
         transition={{ delay: 0.4, duration: 1 }}
         className="text-white/40 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed font-light uppercase tracking-[0.3em] italic mb-12"
       >
-        [SECURE_CHANNEL_ESTABLISHED] // THE PREMIER HUB FOR PATENTS, RESEARCH, AND CROSS-DISCIPLINARY EXCELLENCE AT VVCE.
+        INNOVATION HUB // THE PREMIER HUB FOR PATENTS, RESEARCH, AND CROSS-DISCIPLINARY EXCELLENCE AT VVCE.
       </motion.p>
 
       <motion.div 
@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
         </div>
         <div className="hidden md:block h-px w-12 bg-white/10"></div>
         <div className="flex items-center gap-4 px-6 py-3 bg-white/5 rounded-2xl border border-white/10 text-white/60 font-mono text-[10px] uppercase tracking-widest">
-          <span className="text-primary font-black">STATUS:</span> OPERATIONAL
+          <span className="text-primary font-black">PLATFORM:</span> ACTIVE
         </div>
       </motion.div>
     </section>

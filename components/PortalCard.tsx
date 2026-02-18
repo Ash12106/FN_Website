@@ -41,7 +41,7 @@ export const PortalCard: React.FC<PortalCardProps> = ({ config, delay = 0 }) => 
             <span className="material-symbols-outlined text-4xl leading-none group-hover:drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">{config.icon}</span>
           </motion.div>
           <div className="text-right">
-            <span className={`text-[10px] font-black uppercase tracking-[0.4em] opacity-40 block mb-1`}>Nexus-OS v4.2</span>
+            <span className={`text-[10px] font-black uppercase tracking-[0.4em] opacity-40 block mb-1`}>FORGENEXUS GATEWAY</span>
             <span className={`text-[11px] font-black uppercase tracking-[0.3em] ${textColorClass}`}>
               {config.subtitle}
             </span>
@@ -66,7 +66,7 @@ export const PortalCard: React.FC<PortalCardProps> = ({ config, delay = 0 }) => 
                 onClick={() => setMode(m as AuthMode)}
                 className={`flex-1 py-3 rounded-xl text-[10px] font-black tracking-[0.2em] uppercase transition-all duration-500 ${mode === m ? `bg-white/10 text-white shadow-xl border border-white/10` : 'text-white/30 hover:text-white/50'}`}
               >
-                {m === 'signin' ? 'Authorization' : 'Enlistment'}
+                {m === 'signin' ? 'Sign In' : 'Sign Up'}
               </button>
             ))}
           </div>
@@ -82,13 +82,13 @@ export const PortalCard: React.FC<PortalCardProps> = ({ config, delay = 0 }) => 
             >
               <div className="space-y-5">
                 <Input 
-                  label={isStudent ? "STUDENT_ID" : "FACULTY_TOKEN"} 
-                  placeholder={isStudent ? "NEX-2026-X" : "ARCH-771-ID"}
+                  label={isStudent ? "STUDENT ID" : "FACULTY ID"} 
+                  placeholder={isStudent ? "4VV..." : "FAC..."}
                   type="text"
                   highlightColor={highlightColor}
                 />
                 <Input 
-                  label="AUTH_SECRET"
+                  label="PASSWORD"
                   placeholder="••••••••" 
                   type="password"
                   highlightColor={highlightColor}
@@ -101,12 +101,12 @@ export const PortalCard: React.FC<PortalCardProps> = ({ config, delay = 0 }) => 
                   fullWidth
                   className="rounded-2xl"
                 >
-                  {mode === 'signin' ? 'INITIATE_HANDSHAKE' : 'ENLIST_IDENTITY'}
+                  {mode === 'signin' ? 'Sign In Now' : 'Create Account'}
                 </Button>
                 
                 <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-widest text-white/20">
-                  <span className="cursor-pointer hover:text-primary transition-colors">Emergency Recover</span>
-                  <span className="italic">Status: Standby</span>
+                  <span className="cursor-pointer hover:text-primary transition-colors">Forgot Password?</span>
+                  <span className="italic">System: Ready</span>
                 </div>
               </div>
             </motion.form>

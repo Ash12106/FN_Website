@@ -3,37 +3,40 @@ import { motion } from 'framer-motion';
 
 const supportChannels = [
   {
-    title: "Project Mentorship",
+    title: "Mentorship",
     description: "Connect with faculty experts for patent filing and high-impact R&D guidance.",
     icon: "engineering",
-    action: "Schedule Review",
+    action: "CONTACT MENTOR",
     email: "mentor.forgenexus@vvce.ac.in",
-    status: "Priority",
-    tag: "Faculty Core"
+    status: "AVAILABLE",
+    tag: "FACULTY CORE",
+    freq: "ID: 01"
   },
   {
     title: "Technical Support",
     description: "Assistance with VR/AR hardware, AI compute resources, and lab infrastructure.",
     icon: "terminal",
-    action: "Open Ticket",
+    action: "GET HELP",
     email: "tech.forgenexus@vvce.ac.in",
-    status: "Operational",
-    tag: "Infrastructure"
+    status: "ACTIVE",
+    tag: "INFRASTRUCTURE",
+    freq: "ID: 02"
   },
   {
     title: "Industrial Bridge",
     description: "Propose industrial collaborations or inter-departmental research initiatives.",
     icon: "hub",
-    action: "Submit Brief",
+    action: "PARTNER WITH US",
     email: "partners.forgenexus@vvce.ac.in",
-    status: "Active",
-    tag: "Partnerships"
+    status: "READY",
+    tag: "PARTNERSHIPS",
+    freq: "ID: 03"
   }
 ];
 
 export default function Support() {
   return (
-    <div className="min-h-screen bg-black pt-32 pb-40 px-6 md:px-12 relative overflow-hidden">
+    <div className="max-w-7xl w-full py-32 px-6 md:px-12 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none opacity-50"></div>
       
@@ -45,10 +48,12 @@ export default function Support() {
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-xl"
+              className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-primary/20 bg-primary/10 backdrop-blur-xl shadow-[0_0_30px_rgba(var(--primary-rgb),0.1)]"
             >
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              <span className="text-primary font-display text-[10px] uppercase tracking-[0.4em] font-black">Nexus Command Live</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              <span className="text-primary font-mono text-[10px] uppercase tracking-[0.4em] font-black">Support Helpdesk</span>
+              <span className="w-px h-3 bg-primary/30 mx-2"></span>
+              <span className="text-primary/60 font-mono text-[9px] uppercase tracking-widest">Inquiry Ready</span>
             </motion.div>
 
             <div className="space-y-4">
@@ -58,8 +63,8 @@ export default function Support() {
                 transition={{ delay: 0.2 }}
                 className="text-6xl md:text-9xl font-black font-display text-white uppercase italic leading-[0.85] tracking-tighter"
               >
-                Operational <br />
-                <span className="text-gradient">Support</span>
+                Inquiry <br />
+                <span className="text-gradient">Resources</span>
               </motion.h1>
             </div>
 
@@ -67,9 +72,9 @@ export default function Support() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="max-w-xl text-white/30 font-light text-md leading-relaxed uppercase tracking-widest text-[11px]"
+              className="max-w-2xl text-white/40 font-light text-sm leading-relaxed uppercase tracking-[0.3em] italic"
             >
-              Systemized resource allocation and mentorship protocols for the VVCE Innovation cluster.
+              ADMINISTRATIVE SUPPORT // COORDINATING RESOURCE ALLOCATION AND MENTORSHIP FOR INNOVATORS.
             </motion.p>
           </div>
         </div>
@@ -82,29 +87,23 @@ export default function Support() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: i * 0.15, duration: 0.8 }}
               className="group relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
-              
-              <div className="h-full glass-card p-10 rounded-[2.5rem] border-white/5 bg-white/2 backdrop-blur-2xl flex flex-col justify-between group-hover:border-primary/30 transition-all duration-700 overflow-hidden">
-                {/* Corner Accent */}
-                <div className="absolute top-0 right-0 p-4">
-                   <div className="text-[9px] font-black text-white/10 uppercase tracking-widest group-hover:text-primary transition-colors italic">
-                    {channel.tag} — SC-{100 + i}
-                  </div>
-                </div>
-
+              <div className="h-full glass-card p-10 rounded-[2.5rem] border-primary/10 bg-white/2 backdrop-blur-3xl flex flex-col justify-between group-hover:border-primary/40 transition-all duration-700 overflow-hidden relative">
+                {/* Tactical Backdrop */}
+                <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/5 blur-[60px] rounded-full group-hover:bg-primary/10 transition-colors"></div>
+                
                 <div className="space-y-10 relative z-10">
-                  <div className="flex items-end justify-between">
-                    <div className="w-20 h-20 rounded-3xl bg-black/60 border border-white/5 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-[-5deg] transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                      <span className="material-symbols-outlined text-[42px] leading-none group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]">
+                  <div className="flex items-start justify-between">
+                    <div className="w-16 h-16 rounded-2xl bg-black/40 border border-primary/20 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-500 shadow-2xl">
+                      <span className="material-symbols-outlined text-4xl leading-none group-hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]">
                         {channel.icon}
                       </span>
                     </div>
                     <div className="text-right">
-                       <div className="text-[10px] font-black text-primary/40 uppercase tracking-[0.2em] mb-1">Status</div>
-                       <div className="text-xs font-black text-white uppercase tracking-widest flex items-center gap-2 justify-end">
+                       <div className="text-[9px] font-mono text-primary/40 uppercase tracking-[0.2em] mb-1">FREQ: {channel.freq}</div>
+                       <div className="text-[10px] font-black text-white uppercase tracking-widest flex items-center gap-2 justify-end">
                         {channel.status}
                         <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
                        </div>
@@ -112,31 +111,33 @@ export default function Support() {
                   </div>
 
                   <div className="space-y-4">
-                    <h3 className="text-3xl font-black text-white font-display uppercase italic tracking-tight leading-none">
+                    <div className="flex items-center gap-2">
+                      <div className="h-px w-8 bg-primary/40"></div>
+                      <div className="text-[9px] font-mono text-primary uppercase tracking-widest">{channel.tag}</div>
+                    </div>
+                    <h3 className="text-3xl font-black text-white font-display uppercase italic tracking-tight leading-none group-hover:text-primary transition-colors">
                       {channel.title}
                     </h3>
-                    <p className="text-sm text-white/40 leading-relaxed font-light pr-4 group-hover:text-white/60 transition-colors">
+                    <p className="text-sm text-white/40 leading-relaxed font-light italic group-hover:text-white/60 transition-colors">
                       {channel.description}
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-12 space-y-6 relative z-10">
-                  <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-3 py-3 px-4 rounded-xl bg-black/40 border border-white/5 group-hover:border-primary/10 transition-colors">
-                      <span className="material-symbols-outlined text-primary/40 text-sm">alternate_email</span>
-                      <span className="text-[10px] font-bold text-white/60 group-hover:text-white transition-colors">{channel.email}</span>
-                    </div>
+                <div className="mt-12 space-y-4 relative z-10">
+                  <div className="flex items-center gap-3 py-3 px-4 rounded-xl bg-black/60 border border-white/5 group-hover:border-primary/20 transition-all">
+                    <span className="material-symbols-outlined text-primary/40 text-sm">terminal</span>
+                    <span className="text-[9px] font-mono text-white/40 truncate">{channel.email}</span>
                   </div>
                   
-                  <button className="w-full py-5 rounded-2xl bg-white border border-white text-black font-black font-display uppercase text-xs tracking-[0.3em] group-hover:bg-primary group-hover:border-primary transition-all active:scale-95 flex items-center justify-center gap-4">
+                  <button className="w-full py-5 rounded-2xl bg-primary/10 border border-primary/30 text-primary font-black font-display uppercase text-[10px] tracking-[0.3em] group-hover:bg-primary group-hover:text-black transition-all active:scale-95 flex items-center justify-center gap-3">
                     {channel.action}
-                    <span className="material-symbols-outlined text-sm font-black">arrow_forward</span>
+                    <span className="material-symbols-outlined text-sm font-black">bolt</span>
                   </button>
                 </div>
 
                 {/* Scanline Effect */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent h-[200%] w-full -translate-y-full group-hover:animate-scanline pointer-events-none opacity-0 group-hover:opacity-100"></div>
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/5 to-transparent h-1/2 w-full animate-scanline opacity-0 group-hover:opacity-100 pointer-events-none"></div>
               </div>
             </motion.div>
           ))}
@@ -147,29 +148,36 @@ export default function Support() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-[3rem] p-1 border border-white/5 bg-white/2 backdrop-blur-3xl overflow-hidden group"
+          className="relative rounded-[3rem] p-1 border border-primary/10 bg-white/2 backdrop-blur-3xl overflow-hidden group"
         >
-          <div className="p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12 bg-gradient-to-br from-black/40 to-transparent rounded-[2.9rem]">
-             <div className="space-y-6 text-center md:text-left max-w-xl">
+          <div className="p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12 bg-linear-to-br from-black/60 to-transparent rounded-[2.9rem]">
+             <div className="space-y-8 text-center md:text-left max-w-xl">
                 <div className="flex items-center justify-center md:justify-start gap-4">
-                  <div className="px-4 py-1.5 rounded-md bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest">Physical Hub</div>
-                  <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.3em]">SEC-04-A</div>
+                  <div className="px-4 py-1.5 rounded-md bg-primary/20 border border-primary/40 text-primary text-[10px] font-black uppercase tracking-[0.3em] shadow-[0_0_20px_rgba(var(--primary-rgb),0.2)]">Primary Hub</div>
+                  <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.4em]">ACADEMIC BLOCK</div>
                 </div>
-                <h4 className="text-4xl md:text-5xl font-black text-white font-display uppercase italic tracking-tight">ForgeNexus <span className="text-gradient">Lab Suite</span></h4>
-                <p className="text-white/40 text-[11px] uppercase tracking-[0.2em] font-medium leading-relaxed">
-                  Advanced Prototyping, AR/VR Simulation, and AI Compute Cluster.<br />
-                  <span className="text-primary/60">Room 204 • Academic Block • VVCE Campus</span>
-                </p>
+                <div className="space-y-4">
+                  <h4 className="text-4xl md:text-6xl font-black text-white font-display uppercase italic tracking-tighter">ForgeNexus <span className="text-gradient">Innovation Lab</span></h4>
+                  <p className="text-white/40 text-sm italic uppercase tracking-[0.2em] font-medium leading-relaxed">
+                    LAB UNIT 204 // ADVANCED PROTOTYPING & RESEARCH CENTER.<br />
+                    <span className="text-primary/60 not-italic">Academic Block • VVCE Campus • Mysuru</span>
+                  </p>
+                </div>
              </div>
              
-             <div className="flex flex-col items-center gap-6">
-                <div className="w-32 h-32 rounded-full border-4 border-primary/20 flex items-center justify-center relative shadow-[0_0_50px_rgba(212,175,55,0.1)] group-hover:scale-110 transition-transform duration-700">
-                  <span className="material-symbols-outlined text-5xl text-primary animate-pulse">location_on</span>
-                  <div className="absolute inset-0 rounded-full border border-primary/40 animate-ping opacity-20"></div>
+             <div className="flex flex-col items-center gap-8">
+                <div className="w-40 h-40 rounded-full border-2 border-dashed border-primary/30 flex items-center justify-center relative group-hover:rotate-180 transition-all duration-1000 p-4">
+                  <div className="w-full h-full rounded-full bg-primary/10 border border-primary/40 flex items-center justify-center relative shadow-[0_0_50px_rgba(212,175,55,0.15)] overflow-hidden">
+                    <span className="material-symbols-outlined text-6xl text-primary animate-pulse relative z-10 transition-transform group-hover:rotate-[-180deg]">location_on</span>
+                    {/* Radial Scan */}
+                    <div className="absolute inset-0 bg-linear-to-t from-primary/20 to-transparent animate-pulse"></div>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-white font-black text-[10px] uppercase tracking-widest mb-1">Walking Distance</div>
-                  <div className="text-primary font-black text-sm italic font-display">OPEN 09:00 — 17:00</div>
+                <div className="text-center space-y-2">
+                  <div className="text-white/40 font-black text-[10px] uppercase tracking-[0.4em]">Operations_Window</div>
+                  <div className="px-6 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary font-black text-md italic font-display tracking-widest">
+                    09:00 — 17:00 HRS
+                  </div>
                 </div>
              </div>
           </div>

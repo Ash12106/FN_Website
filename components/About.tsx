@@ -53,8 +53,8 @@ export const About: React.FC = () => {
                     <span className="material-symbols-outlined text-3xl">visibility</span>
                   </div>
                   <div className="flex flex-col">
-                    <div className="text-primary font-display text-[10px] uppercase tracking-[0.6em] font-black">Strategic Directive</div>
-                    <div className="text-[9px] text-white/20 uppercase font-black tracking-widest mt-0.5 whitespace-nowrap">Protocol: 07-NEXUS-VISION</div>
+                    <div className="text-primary font-display text-[10px] uppercase tracking-[0.6em] font-black">Our Philosophy</div>
+                    <div className="text-[9px] text-white/20 uppercase font-black tracking-widest mt-0.5 whitespace-nowrap">Core Objective: Innovate</div>
                   </div>
                </div>
                <h3 className="text-4xl md:text-6xl lg:text-7xl font-black font-display text-white leading-[0.95] tracking-tight italic uppercase">

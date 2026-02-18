@@ -161,7 +161,7 @@ export const Focus: React.FC = () => {
 						className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary text-[10px] font-black uppercase tracking-[0.4em] shadow-[0_0_30px_rgba(var(--primary-rgb),0.05)]"
 					>
 						<span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-						Operational Domains
+						Core Focus Areas
 						<span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
 					</motion.div>
 					<motion.h2
@@ -174,7 +174,7 @@ export const Focus: React.FC = () => {
 					<div className="flex items-center justify-center gap-4 max-w-sm mx-auto">
 						<div className="h-[1px] flex-1 bg-linear-to-r from-transparent to-primary/30"></div>
 						<p className="text-white/40 text-[10px] font-mono uppercase tracking-[0.2em]">
-							GRID_COORD_V9_DELTA
+							RESEARCH DOMAINS
 						</p>
 						<div className="h-[1px] flex-1 bg-linear-to-l from-transparent to-primary/30"></div>
 					</div>
@@ -281,7 +281,7 @@ export const Focus: React.FC = () => {
 										</div>
 
 										<button className="w-full py-4 rounded-2xl border border-primary/20 bg-primary/5 text-primary text-[10px] font-black uppercase tracking-[0.2em] group-hover:bg-primary group-hover:text-black transition-all duration-300">
-											INITIATE_SYNERGY_PROMPT
+											JOIN THIS DOMAIN
 										</button>
 									</div>
 								</div>
