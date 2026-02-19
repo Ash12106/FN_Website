@@ -42,7 +42,7 @@ export const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
           
           <div className="flex flex-col">
             <span className="font-display font-black text-2xl tracking-[0.25em] text-white hidden sm:block leading-none">
-              FORGE<span className="text-primary">NEXUS</span>
+              FORGE <span className="text-primary">NEXUS</span>
             </span>
             <div className="flex items-center gap-2 mt-1 hidden sm:flex">
             </div>
