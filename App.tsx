@@ -95,12 +95,12 @@ const App: React.FC = () => {
           <Header onJoinClick={() => setIsJoinModalOpen(true)} />
         </div>
         
-        <main className="relative pt-32 md:pt-40 pb-20 px-4 flex flex-col items-center">
+        <main className="relative pt-20 md:pt-24 pb-20 px-4 flex flex-col items-center">
           <motion.div 
             style={{ y: yHero }}
             className="pointer-events-auto mb-16"
           >
-            <Hero />
+            <Hero onJoinClick={() => setIsJoinModalOpen(true)} />
           </motion.div>
           
           {/* About Section */}
@@ -117,7 +117,7 @@ const App: React.FC = () => {
             style={{ y: yFocus }}
             className="pointer-events-auto w-full flex justify-center mb-32 px-4 scroll-mt-24"
           >
-            <Focus />
+            <Focus onJoinClick={() => setIsJoinModalOpen(true)} />
           </motion.section>
 
           <motion.section 

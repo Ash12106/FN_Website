@@ -17,12 +17,12 @@ const facultyCoordinators: TeamMember[] = [
 ];
 
 const studentCoreTeam: TeamMember[] = [
-  { name: "Aashish A Shirahatti", role: "President", contact: "aashish@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_aashish.jpg" },
-  { name: "Chandan Gowda H N", role: "Vice President", contact: "chandan@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_chandan.jpg" },
-  { name: "Uthkarsh Gowda", role: "Secretary", contact: "uthkarsh@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_uthkarsh.jpg" },
-  { name: "Gagan S", role: "Research Head", contact: "gagan@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_gagan.jpg" },
-  { name: "Bhoomika", role: "Publications Head", contact: "bhoomika@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_bhoomika.jpg" },
-  { name: "Sumanth", role: "Social Media Head", contact: "sumanth@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_sumanth.jpg" },
+  { name: "Aashish A Shirahatti", role: "President", contact: "mail@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_aashish.jpg" },
+  { name: "Chandan Gowda H N", role: "Vice President", contact: "mail@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_chandan.jpg" },
+  { name: "Uthkarsh Gowda", role: "Secretary", contact: "mail@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_uthkarsh.jpg" },
+  { name: "xx", role: "Research Head", contact: "mail@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_gagan.jpg" },
+  { name: "xx", role: "Publications Head", contact: "mail@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_bhoomika.jpg" },
+  { name: "xx", role: "Social Media Head", contact: "mail@vvce.ac.in", phone: "+91 XXXXX XXXXX", image: "/team/student_sumanth.jpg" },
 ];
 
 export const Team: React.FC = () => {

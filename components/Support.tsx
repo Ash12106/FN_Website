@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Button } from './Button';
 
 const supportChannels = [
   {
@@ -130,10 +131,13 @@ export default function Support() {
                     <span className="text-[9px] font-mono text-white/40 truncate">{channel.email}</span>
                   </div>
                   
-                  <button className="w-full py-5 rounded-2xl bg-primary/10 border border-primary/30 text-primary font-black font-display uppercase text-[10px] tracking-[0.3em] group-hover:bg-primary group-hover:text-black transition-all active:scale-95 flex items-center justify-center gap-3">
+                  <Button 
+                    variant="nexus" 
+                    className="w-full py-6 text-sm tracking-[0.4em] italic font-black"
+                    onClick={() => window.location.href = `mailto:${channel.email}`}
+                  >
                     {channel.action}
-                    <span className="material-symbols-outlined text-sm font-black">bolt</span>
-                  </button>
+                  </Button>
                 </div>
 
                 {/* Scanline Effect */}

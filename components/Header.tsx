@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
         
         <div 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center gap-5 select-none group/logo cursor-pointer"
+          className="flex items-center gap-4 select-none group/logo cursor-pointer"
         >
           <div className="relative">
             <motion.div
@@ -41,30 +41,28 @@ export const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
           </div>
           
           <div className="flex flex-col">
-            <span className="font-display font-black text-2xl tracking-[0.25em] text-white hidden sm:block leading-none">
+            <span className="font-display font-black text-2xl tracking-[0.2em] text-white hidden sm:block leading-none">
               FORGE <span className="text-primary">NEXUS</span>
             </span>
-            <div className="flex items-center gap-2 mt-1 hidden sm:flex">
-            </div>
           </div>
         </div>
 
-        <nav className="hidden md:flex items-center gap-12">
+        <nav className="hidden md:flex items-center gap-10">
           {['About', 'Focus', 'Team', 'Gallery', 'Support'].map((item) => (
             <motion.a 
               key={item}
               href={`#${item.toLowerCase()}`} 
               whileHover={{ y: -2 }}
-              className="relative text-[13px] font-black text-white/60 hover:text-white transition-colors uppercase tracking-[0.35em] py-2 group/nav"
+              className="relative text-[12px] font-black text-white/60 hover:text-white transition-colors uppercase tracking-[0.3em] py-2 group/nav"
             >
               {item}
               <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover/nav:w-full"></span>
             </motion.a>
           ))}
           
-          <div className="h-8 w-[1px] bg-white/10 mx-2"></div>
+          <div className="h-6 w-[1px] bg-white/10 mx-4"></div>
           
-          <Button variant="pulse" onClick={onJoinClick} className="px-8 py-3 rounded-xl scale-90">
+          <Button variant="nexus" onClick={onJoinClick} className="px-10 py-3.5 rounded-xl scale-95 uppercase font-black text-[10px] tracking-[0.35em]">
             Join Nexus
           </Button>
         </nav>

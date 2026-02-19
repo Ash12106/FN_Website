@@ -1,9 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Button } from './Button';
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  onJoinClick?: () => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
   return (
-    <section className="max-w-6xl w-full text-center py-20 md:py-32 relative z-10">
+    <section className="max-w-6xl w-full text-center py-10 md:py-16 relative z-10">
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -36,6 +41,32 @@ export const Hero: React.FC = () => {
       >
         INNOVATION HUB // THE PREMIER HUB FOR PATENTS, RESEARCH, AND CROSS-DISCIPLINARY EXCELLENCE AT VVCE.
       </motion.p>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+        className="flex flex-col md:flex-row items-center justify-center gap-6 mb-20 relative px-6"
+      >
+        <Button 
+          variant="nexus" 
+          onClick={onJoinClick} 
+          className="px-14 py-8 text-xl tracking-[0.8em] font-black italic rounded-[2rem] transition-transform hover:scale-105 active:scale-95 shadow-[0_0_50px_rgba(var(--primary-rgb),0.1)] hover:shadow-[0_0_80px_rgba(var(--primary-rgb),0.2)]"
+        >
+          JOIN NEXUS NOW
+        </Button>
+
+        <Button 
+          variant="nexus" 
+          onClick={() => window.open('https://chat.whatsapp.com/LUToO79YiLTKFvswzI5D9p?mode=gi_t', '_blank')}
+          className="px-14 py-8 text-xl tracking-[0.8em] font-black italic rounded-[2rem] transition-transform hover:scale-105 active:scale-95 shadow-[0_0_50px_rgba(var(--primary-rgb),0.05)] hover:shadow-[0_0_80px_rgba(var(--primary-rgb),0.1)] opacity-90 hover:opacity-100"
+        >
+          <div className="flex items-center gap-3">
+            <span className="material-symbols-outlined text-xl">diversity_3</span>
+            <span>COMMUNITY</span>
+          </div>
+        </Button>
+      </motion.div>
 
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
