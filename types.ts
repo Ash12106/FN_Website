@@ -1,11 +1,6 @@
 export type UserRole = 'student' | 'faculty';
 export type AuthMode = 'signin' | 'signup';
 
-export interface NavItem {
-  label: string;
-  href: string;
-}
-
 export interface PortalConfig {
   role: UserRole;
   title: string;

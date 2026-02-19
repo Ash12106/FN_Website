@@ -1,9 +1,45 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { cva, VariantProps } from 'class-variance-authority';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost' | 'pulse' | 'nexus';
+const buttonVariants = cva(
+  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-95',
+  {
+    variants: {
+      variant: {
+        secondary:
+          'bg-white/5 text-white/80 hover:bg-white/10 border border-white/10 hover:border-white/20 backdrop-blur-md',
+        pulse:
+          'bg-primary text-black font-black hover:bg-primary/90 shadow-[0_0_20px_rgba(212,175,55,0.3)] animate-pulse-slow',
+        nexus: 
+          'nexus-btn text-white font-black tracking-[0.2em] relative overflow-hidden',
+      },
+      size: {
+        default: 'py-3 px-4',
+        sm: 'py-2 px-3 text-xs',
+        lg: 'py-4 px-6 text-lg',
+        icon: 'p-2',
+        nexus: 'py-5 px-12 rounded-2xl',
+      },
+    },
+    defaultVariants: {
+      variant: 'secondary',
+      size: 'default',
+    },
+  }
+);
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+  variant?: 'secondary' | 'pulse' | 'nexus';
+  size?: 'default' | 'sm' | 'lg' | 'icon' | 'nexus';
   fullWidth?: boolean;
+  as?: React.ElementType;
+  href?: string;
+  target?: string;
+  rel?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({ 

@@ -25,19 +25,15 @@ export const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
           className="flex items-center gap-4 select-none group/logo cursor-pointer"
         >
           <div className="relative">
-            <motion.div
-              whileHover={{ rotate: 5, scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="relative z-10"
-            >
+            <div className="relative z-10 w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black/40 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
               <img 
                 src="/logo.png" 
                 alt="Forge Nexus Logo" 
-                className="w-12 h-12 object-contain mix-blend-screen brightness-125 contrast-125 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-500 [mask-image:radial-gradient(circle,black_60%,transparent_100%)]"
+                className="w-full h-full object-cover brightness-110 contrast-110"
               />
-            </motion.div>
+            </div>
             {/* Logo Glow Ring */}
-            <div className="absolute inset-x-[-10px] inset-y-[-10px] bg-primary/20 blur-2xl rounded-full opacity-0 group-hover/logo:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute inset-[-4px] bg-primary/10 blur-xl rounded-full opacity-0 group-hover/logo:opacity-100 transition-opacity duration-700"></div>
           </div>
           
           <div className="flex flex-col">
